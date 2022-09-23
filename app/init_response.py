@@ -7,3 +7,4 @@ def init():
     final_response = control_response.control(response)
 
     return final_response
+

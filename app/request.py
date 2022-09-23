@@ -1,8 +1,13 @@
 import requests
+import user_agent_fake
+
 
 def request_brou():
     response = ''
     url = "https://www.brou.com.uy/c/portal/render_portlet?p_l_id=20593&p_p_id=cotizacionfull_WAR_broutmfportlet_INSTANCE_otHfewh1klyS&p_p_lifecycle=0&p_t_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=0&p_p_col_count=2&p_p_isolated=1&currentURL=%2Fcotizaciones"
+
+
+    user_agent_fk = user_agent_fake.get_user_agent_fake()
 
     payload = {}
     headers = {
@@ -13,7 +18,7 @@ def request_brou():
         'Content-Type': 'text/plain;charset=UTF-8',
         'X-Requested-With': 'XMLHttpRequest',
         'sec-ch-ua-mobile': '?0',
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 OPR/80.0.4170.63',
+        'User-Agent': user_agent_fk,
         'sec-ch-ua-platform': '"Linux"',
         'Origin': 'https://www.brou.com.uy',
         'Sec-Fetch-Site': 'same-origin',
